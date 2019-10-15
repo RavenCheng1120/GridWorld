@@ -4,5 +4,6 @@ Matplotlib animation for fixed policy
 
 > 1. change grid to (10,10)    
 > 2. 3 blocks that cannot access    
-> 3. show fixed policy    
+> 3. show fixed policy     
+
 ![image](https://github.com/RavenCheng1120/GridWorld/blob/master/result.png)
