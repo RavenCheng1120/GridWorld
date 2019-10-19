@@ -26,4 +26,4 @@ while True:
     if biggest_change < small_enough:
         break
 ```    
-![image](https://github.com/RavenCheng1120/GridWorld/blob/master/result.png)    
+![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW2_Fixed%20Policy%20Animation/result.png)    
