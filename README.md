@@ -1,4 +1,4 @@
-# GridWorld_policy evaluation
+# 1.GridWorld_policy evaluation
 強化式機器學習練習-GridWorld    
 Matplotlib animation for fixed policy    
 
@@ -27,3 +27,7 @@ while True:
         break
 ```    
 ![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW2_Fixed%20Policy%20Animation/result.png)    
+
+
+# 2.GridWorld_policy iteration and value iteration
+計算Grid World的V[s]與最佳policy，分為policy iteration以及value iteration
