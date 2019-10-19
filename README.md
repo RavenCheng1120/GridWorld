@@ -70,7 +70,8 @@ for s in states:
 if is_policy_converged:
     break
 ```     
-        
+![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/PolicyIteration.jpg)  
+
 ### value iteration主要演算法：   
 1-policy evaluation(優化)部分    
 ```python
@@ -107,3 +108,4 @@ for s in policy.keys():
             best_a = a
     policy[s] = best_a
 ```     
+![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/ValueIteration.jpg)
