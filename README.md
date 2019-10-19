@@ -31,7 +31,7 @@ while True:
 
 # 2.GridWorld_policy iteration and value iteration
 計算Grid World的V[s]與最佳policy，分為policy iteration以及value iteration      
-policy iteration主要演算法： 
+### policy iteration主要演算法：      
 1-policy evaluation部分   
 ```python
 while True:
@@ -69,4 +69,41 @@ for s in states:
 
 if is_policy_converged:
     break
-```
+```     
+        
+### value iteration主要演算法：   
+1-policy evaluation(優化)部分    
+```python
+while True:
+    biggest_change = 0
+    for s in states:
+        old_v = v[s]
+        if s in policy:
+            best_v = float('-inf')
+            for a in ALL_POSSIBLE_ACTIONS:
+                grid.set_state(s)
+                r = grid.move(a)
+                V = r + gamma * v[grid.current_state()]
+                if V > best_v:
+                    best_v = V
+            v[s] = best_v
+        biggest_change = max(biggest_change, np.abs(old_v-v[s]))
+        
+    if biggest_change < small_enough:
+        break
+```    
+2-計算policy部分   
+```python
+for s in policy.keys():
+    best_a = None
+    best_value = float('-inf')
+    # loop through all possible actions to find the best current action
+    for a in ALL_POSSIBLE_ACTIONS:
+        grid.set_state(s)
+        r = grid.move(a)
+        V = r + gamma * v[grid.current_state()]
+        if V > best_value:
+            best_value = V
+            best_a = a
+    policy[s] = best_a
+```     
