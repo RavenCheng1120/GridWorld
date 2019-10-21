@@ -111,15 +111,19 @@ for s in policy.keys():
 ![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/ValueIteration.jpg)    
     
 # 3.Monte Carlo Prediction
-+ First-visit Monte Carlo
-    *筆記：*
++ First-visit Monte Carlo    
+*筆記：*
 蒙地卡羅預測是在沒有完整環境資訊的情況下使用。    
 First-visit MC prediction 是在固定的policy之下，找到各個state的value。    
 1. 先選定隨機起始點，遊玩一次地圖，走到終點算是遊戲結束，此為一個episode。    
 2. 從終點回推各state會得到的G值，把對應state和return(G值)記錄下來。    
 3. 將這個episode中各state第一次出現時的return存起來。    
 4. 重複上述動作許多次，最後將每個state存起來的很多return值平均，就是value值。    
-+ Monte Carlo Exploring Start
++ Monte Carlo Exploring Start    
+*筆記：*    
+policy是隨機決定，因此會有走向牆壁或無法行走的方塊的情況，為了避免無限迴圈，在玩遊戲時有防禦機制(再度走到同一格時，reward變很低)。    
+跟上一個First-visit Monte Carlo程式碼很像，不同處在於加入action影響return，且需要找到最佳policy。    
+要通過max_dict(d)找到每個state在該v[s]之下，最佳的前進方向(policy)。循環多次(2000次)後，就能收斂到最佳解法。    
 + Monte Carlo with out Exploring Star
     > on-policy first visit MC    
     > off-policy first visit MC     
