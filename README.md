@@ -108,4 +108,11 @@ for s in policy.keys():
             best_a = a
     policy[s] = best_a
 ```     
-![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/ValueIteration.jpg)
+![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/ValueIteration.jpg)    
+    
+# 3.Monte Carlo Prediction
++ First-visit Monte Carlo
++ Monte Carlo Exploring Start
++ Monte Carlo with out Exploring Star
+    > on-policy first visit MC
+    > off-policy first visit MC
