@@ -114,5 +114,12 @@ for s in policy.keys():
 + First-visit Monte Carlo
 + Monte Carlo Exploring Start
 + Monte Carlo with out Exploring Star
-    > on-policy first visit MC
-    > off-policy first visit MC
+    > on-policy first visit MC    
+    > off-policy first visit MC    
+*筆記：*
+蒙地卡羅預測是在沒有完整環境資訊的情況下使用。    
+First-visit MC prediction 是在固定的policy之下，找到各個state的value。    
+1. 先選定隨機起始點，遊玩一次地圖，走到終點算是遊戲結束，此為一個episode。    
+2. 從終點回推各state會得到的G值，把對應state和return(G值)記錄下來。    
+3. 將這個episode中各state第一次出現時的return存起來。    
+4. 重複上述動作許多次，最後將每個state存起來的很多return值平均，就是value值。    
