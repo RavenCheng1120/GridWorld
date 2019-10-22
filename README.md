@@ -111,7 +111,7 @@ for s in policy.keys():
 ![image](https://github.com/RavenCheng1120/GridWorld/blob/master/RL_HW3_Value%20Iteration/ValueIteration.jpg)    
     
 # 3.Monte Carlo Prediction
-*+ First-visit Monte Carlo   * 
++ First-visit Monte Carlo   
 *筆記：*
 蒙地卡羅預測是在沒有完整環境資訊的情況下使用。    
 First-visit MC prediction 是在固定的policy之下，找到各個state的value。    
@@ -131,7 +131,7 @@ policy是隨機決定，因此會有走向牆壁或無法行走的方塊的情�
     > on-policy first visit MC    
     > off-policy first visit MC     
 
-*筆記：*    
-on-policy不再使用exploring start。    
-先初始一個隨機的policy，他每次固定從一個起點出發(2,0)，當前進時，有一定機率會往別的方向走。    
-當下一步是走向迷宮外或是不能走的格子時，他會一直在原地不動，直到觸發隨機往別的方向走，才能離開那個撞牆迴圈。    
+    *筆記：*    
+    on-policy不再使用exploring start。    
+    先初始一個隨機的policy，他每次固定從一個起點出發(2,0)，當前進時，有一定機率會往別的方向走。    
+    當下一步是走向迷宮外或是不能走的格子時，他會一直在原地不動，直到觸發隨機往別的方向走，才能離開那個撞牆迴圈。    
